@@ -20,9 +20,16 @@ body {
   align-items: center;
 }
 
+#color-options {
+  width: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
 .colors {
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background-color: white;
+  border: 2px solid white;
 }

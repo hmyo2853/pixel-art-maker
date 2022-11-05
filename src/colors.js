@@ -1,9 +1,18 @@
-const colors = ["tomato", "yellow", "purple", "teal"];
+const colorArr = ["tomato", "pink", "yellow", "purple", "teal", "black"];
 
 const colorOptions = document.getElementById("color-options");
 
-colorOptions.innerHTML = colors
+colorOptions.innerHTML = colorArr
   .map((items) => {
-    return "<div class='colors' id='" + items + "'></div>";
+    return (
+      "<div class='colors' id='" +
+      items +
+      "' style='background:" +
+      items +
+      "'></div>"
+    );
   })
   .join("");
+
+const colors = document.getElementsByClassName("colors");
+console.log(colors);
