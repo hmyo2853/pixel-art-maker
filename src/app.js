@@ -1,18 +1,22 @@
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 const strokeWidth = document.getElementById("line-width");
-const strokeColor = document.getElementById("color");
-const clearBtn = document.getElementById("options_clear-btn");
+const strokeColor = document.getElementById("options_color");
+const clearBtn = document.getElementById("lineAndBtn_clear-btn");
+const saveBtn = document.getElementById("lineAndBtn_save-btn");
 
-const lineText = document.getElementById("line-width_text");
+const lineText = document.getElementById("lineAndBtn_line-text");
 
 /////////////// color ///////////////
 const colorArr = [
-  "#ff6347",
-  "#ffc0cb",
   "#eee8aa",
-  "#9370db",
-  "#008080",
+  "#ffc0cb",
+  "#FF69B4",
+  "#BEBFD7",
+  "#5A4FCF",
+  "#0060B7",
+  "#31CEFF",
+  "#00BCAF",
   "#222222",
 ];
 /////////////////////////////////////////
@@ -56,12 +60,26 @@ function setLineColor(event) {
 
 // line width text change
 function setLineWidthText(x) {
-  lineText.innerHTML = `line ${x}`;
+  if (x.length != 3) {
+    lineText.innerHTML = `굵기 ${x}.0`;
+  } else {
+    lineText.innerHTML = `굵기 ${x}`;
+  }
 }
 
-function setClear() {
+function onClear() {
   ctx.fillStyle = "white";
   ctx.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+}
+
+function onSave() {
+  if (confirm("작업한 이미지를 다운로드 하시겠습니까?")) {
+    const imgUrl = canvas.toDataURL();
+    const tagA = document.createElement("a");
+    tagA.href = imgUrl;
+    tagA.download = "pixel-canvas.jpg";
+    tagA.click();
+  }
 }
 
 //////////// colors map ////////////////
@@ -97,6 +115,7 @@ canvas.addEventListener("mouseleave", endDrawing);
 strokeWidth.addEventListener("change", setLineWidth);
 strokeColor.addEventListener("change", setLineColor);
 
-clearBtn.addEventListener("click", setClear);
+clearBtn.addEventListener("click", onClear);
+saveBtn.addEventListener("click", onSave);
 
 optionEl.forEach((color) => color.addEventListener("click", setOptionColor));
