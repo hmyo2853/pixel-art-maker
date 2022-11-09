@@ -1,41 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./src/styles.css" />
-    <title>Pixel Canvas</title>
+    <link rel="stylesheet" href="src/styles.css" />
+    <title>Pixel Art</title>
   </head>
   <body>
-    <h1>Pixel Canvas</h1>
-    <div class="canvas-frame">
-      <canvas></canvas>
-      <div class="canvas-tools">
-        <div id="canvas-tools_lineAndBtn">
-          <div class="line">
-            <span id="lineAndBtn_line-text">굵기 5.0</span>
-            <input
-              id="line-width"
-              type="range"
-              min="1"
-              max="10"
-              value="5"
-              step="0.1"
-            />
-          </div>
-          <div class="btn">
-            <button id="lineAndBtn_clear-btn">초기화</button>
-            <button id="lineAndBtn_save-btn">저장</button>
-          </div>
-        </div>
-        <div id="canvas-tools_options">
-          <p>컬러 선택</p>
-          <input type="color" id="options_color" />
-          <div id="options_color-options"></div>
-        </div>
-        <script src="./src/app.js"></script>
+    <div class="wrap">
+      <h1>Pixel Art</h1>
+      <div class="options">
+        <button>초기화</button>
+        <input type="color" value="#00eeff" class="colorPicker" />
+        <input type="number" value="30" class="size" />
       </div>
+      <div class="container"></div>
     </div>
+    <script src="src/app.js"></script>
   </body>
 </html>
