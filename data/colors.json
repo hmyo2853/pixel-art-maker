@@ -1,12 +1,12 @@
 {
   "colors": [
-    { "color1": "#eee8aa" },
-    { "color2": "#ffc0cb" },
-    { "color3": "#FF69B4" },
-    { "color4": "#BEBFD7" },
-    { "color5": "#5A4FCF" },
-    { "color5": "#0060B7" },
-    { "color5": "#31CEFF" },
-    { "color5": "#00BCAF" }
+    { "color": "#eee8aa" },
+    { "color": "#ffc0cb" },
+    { "color": "#FF69B4" },
+    { "color": "#BEBFD7" },
+    { "color": "#5A4FCF" },
+    { "color": "#0060B7" },
+    { "color": "#31CEFF" },
+    { "color": "#00BCAF" }
   ]
 }
