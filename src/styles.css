@@ -47,3 +47,14 @@ body {
 .pixel {
   background-color: white;
 }
+
+.colors {
+  display: flex;
+}
+
+.color-chips {
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  border: 1px solid white;
+}

@@ -66,6 +66,11 @@ async function getColorData() {
 
 getColorData()
   .then((items) => {
-    console.log(items);
+    const colors = document.querySelector(".colors");
+    colors.innerHTML = items
+      .map((items) => {
+        return `<div class="color-chips" style="background-color:${items.color}"></div>`;
+      })
+      .join("");
   })
   .catch(console.log);
