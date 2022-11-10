@@ -1,6 +1,6 @@
 const container = document.querySelector(".container");
 const sizeEl = document.querySelector(".size");
-const size = sizeEl.value;
+let size = sizeEl.value;
 const color = document.querySelector(".colorPicker");
 const resetBtn = document.querySelector(".resetBtn");
 
@@ -22,6 +22,22 @@ window.addEventListener("mousemove", (e) => {
     isDrawing = false;
   }
 });
+
+resetBtn.addEventListener("click", () => {
+  container.innerHTML = "";
+  divideContainer(size);
+});
+
+function resetContainer() {
+  container.innerHTML = "";
+}
+
+sizeEl.addEventListener("change", (e) => {
+  size = e.target.value;
+  resetContainer();
+  divideContainer(e.target.value);
+});
+
 // div pixel 만들기
 function divideContainer(s) {
   container.style.setProperty("--size", s);
@@ -41,3 +57,15 @@ function divideContainer(s) {
 }
 
 divideContainer(size);
+
+async function getColorData() {
+  const response = await fetch("data/colors.json");
+  const json = await response.json();
+  return json.colors;
+}
+
+getColorData()
+  .then((items) => {
+    console.log(items);
+  })
+  .catch(console.log);
