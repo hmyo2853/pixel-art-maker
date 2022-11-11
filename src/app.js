@@ -1,7 +1,7 @@
 const container = document.querySelector(".container");
 const sizeEl = document.querySelector(".size");
 let size = sizeEl.value;
-const color = document.querySelector(".colorPicker");
+const color = document.querySelector(".color-picker");
 const resetBtn = document.querySelector(".resetBtn");
 
 let isDrawing = false;
@@ -23,19 +23,35 @@ window.addEventListener("mousemove", (e) => {
   }
 });
 
+// reset button click event
 resetBtn.addEventListener("click", () => {
   container.innerHTML = "";
   divideContainer(size);
 });
 
+// reset container event
 function resetContainer() {
   container.innerHTML = "";
 }
 
+// input size change event
 sizeEl.addEventListener("change", (e) => {
-  size = e.target.value;
-  resetContainer();
-  divideContainer(e.target.value);
+  if (e.target.value < 1) {
+    sizeEl.value = 1;
+    alert("1 ~ 60까지 입력 가능합니다.");
+    setPixelSize(1);
+  } else if (e.target.value > 60) {
+    sizeEl.value = 60;
+    alert("1 ~ 60까지 입력 가능합니다.");
+    setPixelSize(60);
+  } else {
+    size = e.target.value;
+    setPixelSize(size);
+  }
+  function setPixelSize(x) {
+    resetContainer();
+    divideContainer(x);
+  }
 });
 
 // div pixel 만들기
@@ -69,8 +85,12 @@ getColorData()
     const colors = document.querySelector(".colors");
     colors.innerHTML = items
       .map((items) => {
-        return `<div class="color-chips" style="background-color:${items.color}"></div>`;
+        return `<div class="color-chips" style="background-color:${items.color}" data-color="${items.color}"></div>`;
       })
       .join("");
+    colors.addEventListener("click", (e) => {
+      const targetColor = e.target.dataset.color;
+      color.value = targetColor;
+    });
   })
   .catch(console.log);
