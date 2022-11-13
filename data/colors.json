@@ -1,20 +1,30 @@
 {
   "colors": [
-    { "color": "#eee8aa" },
-    { "color": "#ffc0cb" },
-    { "color": "#FF69B4" },
-    { "color": "#BEBFD7" },
-    { "color": "#5A4FCF" },
-    { "color": "#0060B7" },
-    { "color": "#31CEFF" },
-    { "color": "#00BCAF" },
-    { "color": "#eee8aa" },
-    { "color": "#ffc0cb" },
-    { "color": "#FF69B4" },
-    { "color": "#BEBFD7" },
-    { "color": "#5A4FCF" },
-    { "color": "#0060B7" },
-    { "color": "#31CEFF" },
-    { "color": "#00BCAF" }
+    { "color": "#C0392B" },
+    { "color": "#8E44AD" },
+    { "color": "#2980B9" },
+    { "color": "#16A085" },
+    { "color": "#239B56" },
+    { "color": "#D4AC0D" },
+    { "color": "#D35400" },
+    { "color": "#BDC3C7" },
+
+    { "color": "#E74C3C" },
+    { "color": "#9B59B6" },
+    { "color": "#3498DB" },
+    { "color": "#1ABC9C" },
+    { "color": "#2ECC71" },
+    { "color": "#F1C40F" },
+    { "color": "#E67E22" },
+    { "color": "#D7DBDD" },
+
+    { "color": "#F1948A" },
+    { "color": "#BB8FCE" },
+    { "color": "#85C1E9" },
+    { "color": "#76D7C4" },
+    { "color": "#82E0AA" },
+    { "color": "#F7DC6F" },
+    { "color": "#F0B27A" },
+    { "color": "#ECF0F1" }
   ]
 }
