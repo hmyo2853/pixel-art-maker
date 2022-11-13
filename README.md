@@ -12,7 +12,7 @@ javascript와 html, css, 그리고 json의 데이터를 사용하여
 
 ## 최종 구현 화면 이미지 / 동영상
 
-- [배포 페이지](https://-----------/)
+- [배포 페이지](https://hmyo2853.github.io/pixel-art-maker/)
   <br>
   <br>
 
