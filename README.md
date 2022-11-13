@@ -1,6 +1,6 @@
 # Toy Project - Pixel Art Maker
 
-![pixel-art-maker](https://coverimg.png)
+![pixel-art-maker](/coverimg.PNG)
 
 ## 토이 프로젝트 소개
 
